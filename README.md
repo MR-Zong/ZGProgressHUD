@@ -1,7 +1,7 @@
 # ZGProgressHUD
 类似MBProgressHUD
 
-# 效果展示
+# 目前做的最基本功能
 # 1，网络加载
 # 2，文字toast
 # 效果图
