@@ -98,7 +98,7 @@ ZGProgressHUD *_zgProgressHUD_;
     }
     
     if (_zgProgressHUD_.window) {
-        return;
+        [self dismiss];
     }
     _zgProgressHUD_ = [ZGProgressHUD progressHUDWithView:view message:message mode:mode];
     [view addSubview:_zgProgressHUD_];
