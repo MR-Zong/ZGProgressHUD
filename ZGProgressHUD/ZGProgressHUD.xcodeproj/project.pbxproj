@@ -16,6 +16,7 @@
 		EFE320701DF2581E0079310A /* ZGProgressHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3206F1DF2581E0079310A /* ZGProgressHUDTests.m */; };
 		EFE3207B1DF2581E0079310A /* ZGProgressHUDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3207A1DF2581E0079310A /* ZGProgressHUDUITests.m */; };
 		EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3208F1DF25AF70079310A /* ZGProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		EFE320921DF3B7050079310A /* ZGProgressHUD.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE320911DF3B7050079310A /* ZGProgressHUD.gif */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EFE3207C1DF2581E0079310A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFE3208E1DF25AF70079310A /* ZGProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGProgressHUD.h; sourceTree = "<group>"; };
 		EFE3208F1DF25AF70079310A /* ZGProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGProgressHUD.m; sourceTree = "<group>"; };
+		EFE320911DF3B7050079310A /* ZGProgressHUD.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ZGProgressHUD.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		EFE320551DF2581E0079310A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFE320911DF3B7050079310A /* ZGProgressHUD.gif */,
 				EFE320561DF2581E0079310A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -264,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE320921DF3B7050079310A /* ZGProgressHUD.gif in Resources */,
 				EFE320651DF2581E0079310A /* LaunchScreen.storyboard in Resources */,
 				EFE320621DF2581E0079310A /* Assets.xcassets in Resources */,
 				EFE320601DF2581E0079310A /* Main.storyboard in Resources */,
