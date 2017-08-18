@@ -104,6 +104,26 @@ ZGProgressHUD *_zgProgressHUD_;
     [view addSubview:_zgProgressHUD_];
 }
 
+- (void)showInView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode
+{
+    if (!view) {
+        return;
+    }
+    
+    if (self.window) {
+        [self dismiss];
+    }
+    
+    [self removeAllSubviews];
+    [self  setupViews];
+    
+    self.frame = view.bounds;
+    self.message = message;
+    self.mode = mode;
+    
+    [view addSubview:self];
+}
+
 + (void)dismiss
 {
     if (!_zgProgressHUD_.window) {
@@ -112,6 +132,13 @@ ZGProgressHUD *_zgProgressHUD_;
     
     [_zgProgressHUD_ removeFromSuperview];
     _zgProgressHUD_ = nil;
+}
+
+- (void)removeAllSubviews
+{
+    for (UIView *subView in self.subviews) {
+        [subView removeFromSuperview];
+    }
 }
 
 
@@ -125,7 +152,12 @@ ZGProgressHUD *_zgProgressHUD_;
 
 - (void)dismiss
 {
-    [ZGProgressHUD dismiss];
+    if (!self.window) {
+        return;
+    }
+    
+    [self removeFromSuperview];
+    
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
