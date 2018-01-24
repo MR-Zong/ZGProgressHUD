@@ -135,8 +135,6 @@ ZGProgressHUD *_zgProgressHUD_;
 
 - (void)setupViews
 {
-    self.alpha = 1;
-    
     _maskView = [[UIView alloc] initWithFrame:self.bounds];
     _maskView.backgroundColor = [UIColor clearColor];
     [self addSubview:_maskView];
@@ -192,7 +190,7 @@ ZGProgressHUD *_zgProgressHUD_;
     if (mode == ZGProgressHUDModeToast) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.5 animations:^{
-                self.alpha = 0;
+                self.contentView.alpha = 0;
             }completion:^(BOOL finished) {
                 if (finished) {
                     [self dismiss];
