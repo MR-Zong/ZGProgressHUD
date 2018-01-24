@@ -187,7 +187,7 @@ ZGProgressHUD *_zgProgressHUD_;
     self.contentView = [ZGProgressHUDContentView contentViewWithView:self message:self.message mode:mode];
     [self addSubview:self.contentView];
     
-    if (mode == ZGProgressHUDModeToast) {
+    if (mode == ZGProgressHUDModeToast || mode == ZGProgressHUDModeText) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.5 animations:^{
                 self.contentView.alpha = 0;
