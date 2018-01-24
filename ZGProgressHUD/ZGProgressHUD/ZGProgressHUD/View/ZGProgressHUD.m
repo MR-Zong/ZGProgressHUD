@@ -185,6 +185,7 @@ ZGProgressHUD *_zgProgressHUD_;
     
     if (mode == ZGProgressHUDModeToast) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            self.alpha = 1;
             [UIView animateWithDuration:0.5 animations:^{
                 self.alpha = 0;
             }completion:^(BOOL finished) {
