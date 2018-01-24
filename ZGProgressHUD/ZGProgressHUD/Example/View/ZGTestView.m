@@ -25,7 +25,7 @@
     if (self = [super initWithFrame:frame]) {
         
         _btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn.frame = CGRectMake(50, 100, 120, 60);
+        _btn.frame = CGRectMake(120, 350, 120, 60);
         [_btn setTitle:@"实例方法样例" forState:UIControlStateNormal];
         _btn.backgroundColor = [UIColor blackColor];
         [_btn addTarget:self action:@selector(didTouchButton:) forControlEvents:UIControlEventTouchUpInside];
