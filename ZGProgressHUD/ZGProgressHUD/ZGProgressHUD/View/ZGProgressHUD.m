@@ -156,12 +156,10 @@ ZGProgressHUD *_zgProgressHUD_;
     
     [self removeAllSubviews];
     [self  setupViews];
-    
+
     self.frame = view.bounds;
     self.message = message;
     self.mode = mode;
-    
-    self.backgroundColor = [UIColor redColor];
     
     [view addSubview:self];
 }
