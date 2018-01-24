@@ -19,7 +19,8 @@ typedef NS_ENUM(NSInteger,ZGProgressHUDMode){
 + (void)showInView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode;
 + (void)dismiss;
 
-/** 多个progressHud 要同时存在在同一个view时候
+
+/** 多个progressHud 要同时存在在同一个父view时候
  * 就需要 alloc init 多个ZGProgressHUD
  * 让他们互相独立，互不干扰
  */

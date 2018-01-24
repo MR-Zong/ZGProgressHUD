@@ -91,6 +91,15 @@ ZGProgressHUD *_zgProgressHUD_;
 
 @implementation ZGProgressHUD
 
++ (instancetype)progressHUDWithView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode
+{
+    ZGProgressHUD *progressHUD = [[ZGProgressHUD alloc] initWithFrame:view.bounds];
+    progressHUD.message = message;
+    progressHUD.mode = mode;
+    return progressHUD;
+}
+
+
 + (void)showInView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode
 {
     if (!view) {
@@ -104,6 +113,37 @@ ZGProgressHUD *_zgProgressHUD_;
     [view addSubview:_zgProgressHUD_];
 }
 
++ (void)dismiss
+{
+    if (!_zgProgressHUD_.window) {
+        return;
+    }
+    
+    [_zgProgressHUD_ removeFromSuperview];
+    _zgProgressHUD_ = nil;
+}
+
+
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        [self setupViews];
+    }
+    return self;
+}
+
+- (void)setupViews
+{
+    self.alpha = 1;
+    
+    _maskView = [[UIView alloc] initWithFrame:self.bounds];
+    _maskView.backgroundColor = [UIColor clearColor];
+    [self addSubview:_maskView];
+}
+
+
+#pragma mark - 对象方法
 - (void)showInView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode
 {
     if (!view) {
@@ -121,33 +161,9 @@ ZGProgressHUD *_zgProgressHUD_;
     self.message = message;
     self.mode = mode;
     
-    [view addSubview:self];
-}
-
-+ (void)dismiss
-{
-    if (!_zgProgressHUD_.window) {
-        return;
-    }
+    self.backgroundColor = [UIColor redColor];
     
-    [_zgProgressHUD_ removeFromSuperview];
-    _zgProgressHUD_ = nil;
-}
-
-- (void)removeAllSubviews
-{
-    for (UIView *subView in self.subviews) {
-        [subView removeFromSuperview];
-    }
-}
-
-
-+ (instancetype)progressHUDWithView:(UIView *)view message:(NSString *)message mode:(ZGProgressHUDMode)mode
-{
-    ZGProgressHUD *progressHUD = [[ZGProgressHUD alloc] initWithFrame:view.bounds];
-    progressHUD.message = message;
-    progressHUD.mode = mode;
-    return progressHUD;
+    [view addSubview:self];
 }
 
 - (void)dismiss
@@ -160,19 +176,11 @@ ZGProgressHUD *_zgProgressHUD_;
     
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (void)removeAllSubviews
 {
-    if (self = [super initWithFrame:frame]) {
-        [self setupViews];
+    for (UIView *subView in self.subviews) {
+        [subView removeFromSuperview];
     }
-    return self;
-}
-
-- (void)setupViews
-{
-    _maskView = [[UIView alloc] initWithFrame:self.bounds];
-    _maskView.backgroundColor = [UIColor clearColor];
-    [self addSubview:_maskView];
 }
 
 #pragma mark - setter
@@ -185,7 +193,6 @@ ZGProgressHUD *_zgProgressHUD_;
     
     if (mode == ZGProgressHUDModeToast) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-            self.alpha = 1;
             [UIView animateWithDuration:0.5 animations:^{
                 self.alpha = 0;
             }completion:^(BOOL finished) {

@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "ZGProgressHUD.h"
+#import "ZGTestController.h"
+
 
 @interface ViewController ()
 
@@ -21,7 +23,7 @@
     // Example:Loading
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn1.tag = 10;
-    btn1.frame = CGRectMake(50, 440, 120, 60);
+    btn1.frame = CGRectMake(50, 100, 120, 60);
     [btn1 setTitle:@"网络加载样例" forState:UIControlStateNormal];
     btn1.backgroundColor = [UIColor orangeColor];
     [btn1 addTarget:self action:@selector(didTouchButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -29,11 +31,21 @@
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.tag = 20;
-    btn2.frame = CGRectMake(CGRectGetMaxX(btn1.frame) + 20, 440, 120, 60);
+    btn2.frame = CGRectMake(CGRectGetMaxX(btn1.frame) + 20, 100, 120, 60);
     [btn2 setTitle:@"toast样例" forState:UIControlStateNormal];
     btn2.backgroundColor = [UIColor purpleColor];
     [btn2 addTarget:self action:@selector(didTouchButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn2];
+    
+    UIButton *btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn3.tag = 30;
+    btn3.frame = CGRectMake(btn1.frame.origin.x, 200, 120, 60);
+    [btn3 setTitle:@"实例方法样例" forState:UIControlStateNormal];
+    btn3.backgroundColor = [UIColor grayColor];
+    [btn3 addTarget:self action:@selector(didTouchButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn3];
+    
+    
 
     
 }
@@ -44,6 +56,9 @@
         [self loadData];
     }else if(btn.tag == 20){
             [ZGProgressHUD showInView:self.view message:@"最大输入字数不能超过140~" mode:ZGProgressHUDModeToast];
+    }else if (btn.tag == 30){
+        ZGTestController *vc = [[ZGTestController alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
     }
 }
 

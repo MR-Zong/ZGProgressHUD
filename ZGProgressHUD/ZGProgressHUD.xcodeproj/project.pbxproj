@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EFC56B862018813700BA5487 /* ZGTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B852018813700BA5487 /* ZGTestController.m */; };
+		EFC56B892018836800BA5487 /* ZGTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B882018836800BA5487 /* ZGTestView.m */; };
 		EFE320571DF2581E0079310A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE320561DF2581E0079310A /* main.m */; };
 		EFE3205A1DF2581E0079310A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE320591DF2581E0079310A /* AppDelegate.m */; };
 		EFE3205D1DF2581E0079310A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3205C1DF2581E0079310A /* ViewController.m */; };
@@ -15,8 +17,8 @@
 		EFE320651DF2581E0079310A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE320631DF2581E0079310A /* LaunchScreen.storyboard */; };
 		EFE320701DF2581E0079310A /* ZGProgressHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3206F1DF2581E0079310A /* ZGProgressHUDTests.m */; };
 		EFE3207B1DF2581E0079310A /* ZGProgressHUDUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3207A1DF2581E0079310A /* ZGProgressHUDUITests.m */; };
-		EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3208F1DF25AF70079310A /* ZGProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
-		EFE320921DF3B7050079310A /* ZGProgressHUD.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE320911DF3B7050079310A /* ZGProgressHUD.gif */; settings = {ASSET_TAGS = (); }; };
+		EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3208F1DF25AF70079310A /* ZGProgressHUD.m */; };
+		EFE320921DF3B7050079310A /* ZGProgressHUD.gif in Resources */ = {isa = PBXBuildFile; fileRef = EFE320911DF3B7050079310A /* ZGProgressHUD.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EFC56B842018813700BA5487 /* ZGTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGTestController.h; sourceTree = "<group>"; };
+		EFC56B852018813700BA5487 /* ZGTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGTestController.m; sourceTree = "<group>"; };
+		EFC56B872018836800BA5487 /* ZGTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGTestView.h; sourceTree = "<group>"; };
+		EFC56B882018836800BA5487 /* ZGTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGTestView.m; sourceTree = "<group>"; };
 		EFE320521DF2581E0079310A /* ZGProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE320561DF2581E0079310A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFE320581DF2581E0079310A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +89,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFC56B802018811F00BA5487 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B812018811F00BA5487 /* Controller */,
+				EFC56B822018811F00BA5487 /* Model */,
+				EFC56B832018811F00BA5487 /* View */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		EFC56B812018811F00BA5487 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B842018813700BA5487 /* ZGTestController.h */,
+				EFC56B852018813700BA5487 /* ZGTestController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EFC56B822018811F00BA5487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFC56B832018811F00BA5487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFC56B872018836800BA5487 /* ZGTestView.h */,
+				EFC56B882018836800BA5487 /* ZGTestView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EFE320491DF2581E0079310A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +147,7 @@
 		EFE320541DF2581E0079310A /* ZGProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				EFC56B802018811F00BA5487 /* Example */,
 				EFE320881DF2585A0079310A /* ZGProgressHUD */,
 				EFE320581DF2581E0079310A /* AppDelegate.h */,
 				EFE320591DF2581E0079310A /* AppDelegate.m */,
@@ -295,8 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC56B862018813700BA5487 /* ZGTestController.m in Sources */,
 				EFE3205D1DF2581E0079310A /* ViewController.m in Sources */,
 				EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */,
+				EFC56B892018836800BA5487 /* ZGTestView.m in Sources */,
 				EFE3205A1DF2581E0079310A /* AppDelegate.m in Sources */,
 				EFE320571DF2581E0079310A /* main.m in Sources */,
 			);
@@ -526,6 +570,7 @@
 				EFE320811DF2581E0079310A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFE320821DF2581E0079310A /* Build configuration list for PBXNativeTarget "ZGProgressHUDTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +579,7 @@
 				EFE320841DF2581E0079310A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EFE320851DF2581E0079310A /* Build configuration list for PBXNativeTarget "ZGProgressHUDUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +588,7 @@
 				EFE320871DF2581E0079310A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
