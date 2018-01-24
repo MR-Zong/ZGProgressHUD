@@ -6,11 +6,11 @@
 //  Copyright © 2018年 XuZonggen. All rights reserved.
 //
 
-#import "ZGTestController.h"
+#import "ZGExampleController.h"
 #import "ZGProgressHUD.h"
-#import "ZGTestView.h"
+#import "ZGExampleObjectView.h"
 
-@interface ZGTestController ()
+@interface ZGExampleController ()
 
 @property (nonatomic, strong) UIScrollView *sv;
 @property (nonatomic, strong) UIButton *backBtn;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ZGTestController
+@implementation ZGExampleController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +30,7 @@
     _sv.backgroundColor = [UIColor yellowColor];
     
     for (int i=0; i<3; i++) {
-        ZGTestView *view = [[ZGTestView alloc] initWithFrame:CGRectMake(i*_sv.bounds.size.width, 0, _sv.bounds.size.width, _sv.bounds.size.height)];        
+        ZGExampleObjectView *view = [[ZGExampleObjectView alloc] initWithFrame:CGRectMake(i*_sv.bounds.size.width, 0, _sv.bounds.size.width, _sv.bounds.size.height)];        
         [_sv addSubview:view];
     }
     [self.view addSubview:_sv];

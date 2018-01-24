@@ -6,10 +6,10 @@
 //  Copyright © 2018年 XuZonggen. All rights reserved.
 //
 
-#import "ZGTestView.h"
+#import "ZGExampleObjectView.h"
 #import "ZGProgressHUD.h"
 
-@interface ZGTestView ()
+@interface ZGExampleObjectView ()
 
 @property (nonatomic, strong) ZGProgressHUD *progressHud;
 @property (nonatomic, strong) UIButton *btn;
@@ -18,15 +18,15 @@
 
 @end
 
-@implementation ZGTestView
+@implementation ZGExampleObjectView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
         
         _btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _btn.frame = CGRectMake(120, 350, 120, 60);
-        [_btn setTitle:@"实例方法样例" forState:UIControlStateNormal];
+        _btn.frame = CGRectMake(80, 360, 180, 60);
+        [_btn setTitle:@"点击，模拟网络加载" forState:UIControlStateNormal];
         _btn.backgroundColor = [UIColor blackColor];
         [_btn addTarget:self action:@selector(didTouchButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_btn];

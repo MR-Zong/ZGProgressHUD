@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZGTestView : UIView
+@interface ZGExampleObjectView : UIView
 
 
 @end

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "ZGProgressHUD.h"
-#import "ZGTestController.h"
+#import "ZGExampleController.h"
 
 
 @interface ViewController ()
@@ -57,7 +57,7 @@
     }else if(btn.tag == 20){
             [ZGProgressHUD showInView:self.view message:@"最大输入字数不能超过140~" mode:ZGProgressHUDModeToast];
     }else if (btn.tag == 30){
-        ZGTestController *vc = [[ZGTestController alloc] init];
+        ZGExampleController *vc = [[ZGExampleController alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     }
 }

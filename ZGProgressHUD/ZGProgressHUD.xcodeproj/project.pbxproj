@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EFC56B862018813700BA5487 /* ZGTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B852018813700BA5487 /* ZGTestController.m */; };
-		EFC56B892018836800BA5487 /* ZGTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B882018836800BA5487 /* ZGTestView.m */; };
+		EFC56B862018813700BA5487 /* ZGExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B852018813700BA5487 /* ZGExampleController.m */; };
+		EFC56B892018836800BA5487 /* ZGExampleObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B882018836800BA5487 /* ZGExampleObjectView.m */; };
 		EFE320571DF2581E0079310A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE320561DF2581E0079310A /* main.m */; };
 		EFE3205A1DF2581E0079310A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE320591DF2581E0079310A /* AppDelegate.m */; };
 		EFE3205D1DF2581E0079310A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE3205C1DF2581E0079310A /* ViewController.m */; };
@@ -39,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EFC56B842018813700BA5487 /* ZGTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGTestController.h; sourceTree = "<group>"; };
-		EFC56B852018813700BA5487 /* ZGTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGTestController.m; sourceTree = "<group>"; };
-		EFC56B872018836800BA5487 /* ZGTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGTestView.h; sourceTree = "<group>"; };
-		EFC56B882018836800BA5487 /* ZGTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGTestView.m; sourceTree = "<group>"; };
+		EFC56B842018813700BA5487 /* ZGExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGExampleController.h; sourceTree = "<group>"; };
+		EFC56B852018813700BA5487 /* ZGExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGExampleController.m; sourceTree = "<group>"; };
+		EFC56B872018836800BA5487 /* ZGExampleObjectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGExampleObjectView.h; sourceTree = "<group>"; };
+		EFC56B882018836800BA5487 /* ZGExampleObjectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGExampleObjectView.m; sourceTree = "<group>"; };
 		EFE320521DF2581E0079310A /* ZGProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZGProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE320561DF2581E0079310A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFE320581DF2581E0079310A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 		EFC56B812018811F00BA5487 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EFC56B842018813700BA5487 /* ZGTestController.h */,
-				EFC56B852018813700BA5487 /* ZGTestController.m */,
+				EFC56B842018813700BA5487 /* ZGExampleController.h */,
+				EFC56B852018813700BA5487 /* ZGExampleController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 		EFC56B832018811F00BA5487 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFC56B872018836800BA5487 /* ZGTestView.h */,
-				EFC56B882018836800BA5487 /* ZGTestView.m */,
+				EFC56B872018836800BA5487 /* ZGExampleObjectView.h */,
+				EFC56B882018836800BA5487 /* ZGExampleObjectView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -337,10 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFC56B862018813700BA5487 /* ZGTestController.m in Sources */,
+				EFC56B862018813700BA5487 /* ZGExampleController.m in Sources */,
 				EFE3205D1DF2581E0079310A /* ViewController.m in Sources */,
 				EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */,
-				EFC56B892018836800BA5487 /* ZGTestView.m in Sources */,
+				EFC56B892018836800BA5487 /* ZGExampleObjectView.m in Sources */,
 				EFE3205A1DF2581E0079310A /* AppDelegate.m in Sources */,
 				EFE320571DF2581E0079310A /* main.m in Sources */,
 			);

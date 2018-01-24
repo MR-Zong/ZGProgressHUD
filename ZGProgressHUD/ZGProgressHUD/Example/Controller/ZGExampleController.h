@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZGTestController : UIViewController
+@interface ZGExampleController : UIViewController
 
 @end
