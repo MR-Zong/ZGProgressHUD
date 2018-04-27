@@ -23,6 +23,12 @@ ZGProgressHUD *_zgProgressHUD_;
     CGFloat contentViewWidth = view.bounds.size.width;
     CGFloat contentViewHeight = 0;
     
+    // 高斯模糊背景
+    UIBlurEffect *ef = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *ve = [[UIVisualEffectView alloc] initWithEffect:ef];
+    ve.frame = CGRectMake(0, 0, 200, 200);
+    [contentView addSubview:ve];
+
     if (mode == ZGProgressHUDModeIndeterminate) {
         
         contentViewWidth = 100;
@@ -40,7 +46,7 @@ ZGProgressHUD *_zgProgressHUD_;
             textLabel.text = message;
             textLabel.textColor = [UIColor whiteColor];
             textLabel.textAlignment = NSTextAlignmentCenter;
-            textLabel.font = [UIFont systemFontOfSize:18];
+            textLabel.font = [UIFont systemFontOfSize:14];
             textLabel.frame = CGRectMake(0,60 + 10,contentViewWidth,21);
             [contentView addSubview:textLabel];
         }else {
@@ -56,7 +62,7 @@ ZGProgressHUD *_zgProgressHUD_;
             textLabel.text = message;
             textLabel.textColor = [UIColor whiteColor];
             textLabel.textAlignment = NSTextAlignmentCenter;
-            textLabel.font = [UIFont systemFontOfSize:18];
+            textLabel.font = [UIFont systemFontOfSize:14];
             CGFloat textLabelHeight = 21;
             CGFloat textLabelWidth = [message boundingRectWithSize:CGSizeMake(view.bounds.size.width, textLabelHeight) options:NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName :textLabel.font} context:nil].size.width;
             
