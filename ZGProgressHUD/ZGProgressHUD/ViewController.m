@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ZGProgressHUD.h"
+#import "ZGProgressHUD2.h"
 #import "ZGExampleController.h"
 
 
@@ -53,7 +54,7 @@
 - (void)didTouchButton:(UIButton *)btn
 {
     if (btn.tag == 10) {
-        [self loadData];
+        [self loadData2];
     }else if(btn.tag == 20){
             [ZGProgressHUD showInView:self.view message:@"最大输入字数不能超过140~" mode:ZGProgressHUDModeToast];
     }else if (btn.tag == 30){
@@ -69,6 +70,17 @@
         if (1) {
        
             [ZGProgressHUD showInView:self.view message:@"网络无连接" mode:ZGProgressHUDModeToast];
+        }
+    });
+}
+
+- (void)loadData2
+{
+    [ZGProgressHUD2 showInView:self.view message:@"加载中..." mode:ZGProgressHUD2Mode_indeterminate];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 8*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        if (1) {
+            
+            [ZGProgressHUD2 showInView:self.view message:@"网络无连接" mode:ZGProgressHUD2Mode_toast];
         }
     });
 }

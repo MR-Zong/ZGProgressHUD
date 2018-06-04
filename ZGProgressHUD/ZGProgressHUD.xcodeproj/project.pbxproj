@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF620C2920C4E02100D6AC04 /* ZGProgressHUD2.m in Sources */ = {isa = PBXBuildFile; fileRef = EF620C2820C4E02100D6AC04 /* ZGProgressHUD2.m */; };
+		EF620C2C20C4E2A600D6AC04 /* ZGProgressIndicateView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF620C2B20C4E2A600D6AC04 /* ZGProgressIndicateView.m */; };
 		EFC56B862018813700BA5487 /* ZGExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B852018813700BA5487 /* ZGExampleController.m */; };
 		EFC56B892018836800BA5487 /* ZGExampleObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC56B882018836800BA5487 /* ZGExampleObjectView.m */; };
 		EFE320571DF2581E0079310A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE320561DF2581E0079310A /* main.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF620C2720C4E02100D6AC04 /* ZGProgressHUD2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGProgressHUD2.h; sourceTree = "<group>"; };
+		EF620C2820C4E02100D6AC04 /* ZGProgressHUD2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGProgressHUD2.m; sourceTree = "<group>"; };
+		EF620C2A20C4E2A600D6AC04 /* ZGProgressIndicateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGProgressIndicateView.h; sourceTree = "<group>"; };
+		EF620C2B20C4E2A600D6AC04 /* ZGProgressIndicateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGProgressIndicateView.m; sourceTree = "<group>"; };
 		EFC56B842018813700BA5487 /* ZGExampleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGExampleController.h; sourceTree = "<group>"; };
 		EFC56B852018813700BA5487 /* ZGExampleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGExampleController.m; sourceTree = "<group>"; };
 		EFC56B872018836800BA5487 /* ZGExampleObjectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGExampleObjectView.h; sourceTree = "<group>"; };
@@ -89,6 +95,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF620C2520C4E01000D6AC04 /* ZGProgressHUD2 */ = {
+			isa = PBXGroup;
+			children = (
+				EF620C2620C4E01100D6AC04 /* View */,
+			);
+			path = ZGProgressHUD2;
+			sourceTree = "<group>";
+		};
+		EF620C2620C4E01100D6AC04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF620C2720C4E02100D6AC04 /* ZGProgressHUD2.h */,
+				EF620C2820C4E02100D6AC04 /* ZGProgressHUD2.m */,
+				EF620C2A20C4E2A600D6AC04 /* ZGProgressIndicateView.h */,
+				EF620C2B20C4E2A600D6AC04 /* ZGProgressIndicateView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EFC56B802018811F00BA5487 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +172,7 @@
 		EFE320541DF2581E0079310A /* ZGProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				EF620C2520C4E01000D6AC04 /* ZGProgressHUD2 */,
 				EFC56B802018811F00BA5487 /* Example */,
 				EFE320881DF2585A0079310A /* ZGProgressHUD */,
 				EFE320581DF2581E0079310A /* AppDelegate.h */,
@@ -273,6 +299,7 @@
 				TargetAttributes = {
 					EFE320511DF2581E0079310A = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 6BVF5F2U9J;
 					};
 					EFE3206A1DF2581E0079310A = {
 						CreatedOnToolsVersion = 7.0;
@@ -342,6 +369,8 @@
 				EFE320901DF25AF70079310A /* ZGProgressHUD.m in Sources */,
 				EFC56B892018836800BA5487 /* ZGExampleObjectView.m in Sources */,
 				EFE3205A1DF2581E0079310A /* AppDelegate.m in Sources */,
+				EF620C2C20C4E2A600D6AC04 /* ZGProgressIndicateView.m in Sources */,
+				EF620C2920C4E02100D6AC04 /* ZGProgressHUD2.m in Sources */,
 				EFE320571DF2581E0079310A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6BVF5F2U9J;
 				INFOPLIST_FILE = ZGProgressHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -495,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6BVF5F2U9J;
 				INFOPLIST_FILE = ZGProgressHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
