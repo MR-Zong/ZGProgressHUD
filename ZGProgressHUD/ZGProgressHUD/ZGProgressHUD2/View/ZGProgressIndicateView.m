@@ -34,7 +34,7 @@
         layer.strokeColor = color.CGColor;
         //背景填充色
         layer.fillColor = [UIColor clearColor].CGColor;
-        //设置半径为10
+        //设置半径
         CGFloat radius = self.bounds.size.width/2.0;
         //按照顺时针方向
         BOOL clockWise = YES;
