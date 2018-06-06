@@ -24,7 +24,7 @@
 
 @implementation ZGProgressDiskView
 
-- (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color
+- (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color startAngle:(CGFloat)startAngle endAngle:(CGFloat)endAngle
 {
     if (self = [super initWithFrame:frame]) {
         
@@ -39,7 +39,8 @@
         //按照顺时针方向
         BOOL clockWise = YES;
         //初始化一个路径
-        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.center radius:radius startAngle:(1.25*M_PI) endAngle:1.75f*M_PI clockwise:clockWise];
+        // startAngle 1.25*M_PI endAngle 1.75f*M_PI
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:self.center radius:radius startAngle:startAngle endAngle:endAngle clockwise:clockWise];
         layer.path = [path CGPath];
         [self.layer addSublayer:layer];
     }
@@ -87,20 +88,20 @@
         
 //        self.backgroundColor = [UIColor darkGrayColor];
         
-        _blueDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:9/255.0 green:69/255.0 blue:255/255 alpha:1]];
-        _blueDisk.rotationRate = 0.2;
+        _blueDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:9/255.0 green:69/255.0 blue:255/255 alpha:1] startAngle:1*M_PI endAngle:1.4*M_PI];
+        _blueDisk.rotationRate = 0.1;
         [self addSubview:_blueDisk];
     
-        _orangeDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:253/255.0 green:135/255.0 blue:9/255.0 alpha:1]];
-        _orangeDisk.rotationRate = 0.4;
+        _orangeDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:253/255.0 green:135/255.0 blue:9/255.0 alpha:1] startAngle:0.5*M_PI endAngle:0.9*M_PI];
+        _orangeDisk.rotationRate = 0.2;
         [self addSubview:_orangeDisk];
 
-        _redDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:196/255.0 green:27/255.0 blue:1/255.0 alpha:1]];
-        _redDisk.rotationRate = 0.5;
+        _redDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor colorWithRed:196/255.0 green:27/255.0 blue:1/255.0 alpha:1] startAngle:0*M_PI endAngle:0.4*M_PI];
+        _redDisk.rotationRate = 0.36;
         [self addSubview:_redDisk];
         
-        _whiteDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor whiteColor]];
-        _whiteDisk.rotationRate = 0.6;
+        _whiteDisk = [[ZGProgressDiskView alloc] initWithFrame:self.bounds color:[UIColor whiteColor] startAngle:1.5*M_PI endAngle:1.9*M_PI];
+        _whiteDisk.rotationRate = 0.5;
         [self addSubview:_whiteDisk];
     }
     

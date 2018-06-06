@@ -77,7 +77,7 @@
 - (void)loadData2
 {
     [ZGProgressHUD2 showInView:self.view message:@"加载中..." mode:ZGProgressHUD2Mode_indeterminate];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 8*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 18*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         if (1) {
             
             [ZGProgressHUD2 showInView:self.view message:@"网络无连接" mode:ZGProgressHUD2Mode_toast];
